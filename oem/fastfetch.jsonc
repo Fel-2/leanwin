@@ -1,0 +1,26 @@
+{
+  "logo": {
+    "type": "file",
+    "source": "%APPDATA%/fastfetch/logo.txt",
+    "padding": { "right": 2 }
+  },
+  "display": {
+    "separator": " -> ",
+    "color": "cyan"
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "cpu",
+    "memory",
+    { "type": "disk", "folders": "C:\\" },
+    "localip",
+    "separator",
+    "colors"
+  ]
+}

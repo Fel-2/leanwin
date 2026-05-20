@@ -1,0 +1,28 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: winbuild
+    environment:
+      VERSION: "2022"
+      EDITION: "DATACENTERCORE"
+      RAM_SIZE: "4G"
+      CPU_CORES: "4"
+      DISK_SIZE: "32G"
+      USERNAME: "builder"
+      PASSWORD: "build"
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389
+      - 2223:22
+      - 2224:8080
+    volumes:
+      - ./storage:/storage
+      - ./shared:/shared
+      - ./oem:/oem
+    restart: always
+    stop_grace_period: 2m

@@ -1,0 +1,7 @@
+storage/
+shared/
+*.iso
+leanwin_key
+leanwin_key.pub
+.git/
+*.log
